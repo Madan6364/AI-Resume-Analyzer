@@ -1,26 +1,25 @@
-### AI Resume Analyzer (Advanced ATS Scoring)
+### AI Resume Analyzer (ATS Score System)
 
 #### Project Overview
-The AI Resume Analyzer is a full-stack project that analyzes a user's resume (PDF format) and generates a realistic ATS score based on skills, resume structure, and important sections such as projects, education, and experience.
-This project simulates how real Applicant Tracking Systems (ATS) evaluate resumes.
+This project is an AI-based Resume Analyzer that allows users to upload a resume (PDF file) and generates an ATS score based on skills, resume structure, and important sections such as education, projects, and experience.
+The system uses NLP techniques to extract skills and analyze resume content automatically.
 
 #### Features
-✔ Upload resume in PDF format
-✔ Extract text from resume automatically
-✔ Detect technical skills using NLP
-✔ Identify resume sections (skills, projects, education, experience, summary)
-✔ Generate a realistic ATS score (0 – 100)
-✔ Show missing skills to improve the resume
-✔ User-friendly web interface
-✔ FastAPI backend with NLP integration
+Upload resume in PDF format
+Automatic text extraction from resume
+Skill detection using NLP
+Resume section detection (skills, projects, education, experience)
+ATS score generation (0–100)
+Missing skills suggestion
+Simple and clean web interface
 
 #### Technologies Used
 Python
 FastAPI
-NLP (spaCy)
-HTML, CSS, JavaScript
-Jinja2 Templates
-PDF text extraction
+spaCy (NLP)
+HTML
+CSS
+JavaScript
 Git & GitHub
 
 #### Project Structure
@@ -39,56 +38,33 @@ ai-resume-analyzer/
 │   └── style.css
 │
 ├── requirements.txt
-├── README.md
-└── render.yaml
+└── README.md
 
 #### How It Works
 User uploads a resume (PDF file)
 The system extracts text from the PDF
-NLP is used to detect skills and important resume sections
-ATS score is calculated based on:
-Skills match
+NLP is used to detect skills in the resume
+Resume sections are identified
+ATS score is generated based on the analysis
+Results are displayed to the user
 
-#### Professional summary
-Projects
-Experience
-Education
-Resume structure
-The result is displayed with:
-ATS Score
-Skills Found
-Missing Skills
-
-#### Installation and Running the Project
-Step 1: Clone the repository
+#### How to Run the Project
 git clone https://github.com/your-username/ai-resume-analyzer.git
 cd ai-resume-analyzer
-Step 2: Install dependencies
 pip install -r requirements.txt
-Step 3: Download spaCy model
 python -m spacy download en_core_web_sm
-Step 4: Run the project
 python -m uvicorn app.main:app --reload
 
-Open this in your browser:
+Open in browser:
 http://127.0.0.1:8000
-Sample Output
 
-#### The system will show:
-ATS Score (out of 100)
-Skills detected in the resume
-Missing skills to improve the resume
-Real-World Use Case
-
-#### This project helps:
-Students improve their resumes
-Job seekers understand ATS systems
-Beginners learn how NLP works in real applications
-Recruiters quickly analyze resumes
+#### Real-World Use Case
+This project can be used by students and job seekers to check how their resume performs in an ATS (Applicant Tracking System). It helps users understand whether their resume contains the required skills and important sections such as projects, education, and experience. This system can also help freshers improve their resumes before applying for jobs or internships.
 
 #### Future Improvements
-Resume vs Job Description matching
-Better skill ranking (beginner / intermediate / advanced)
-Dashboard with graphs
-Multiple resume analysis
-Resume improvement suggestions
+Add resume vs job description matching
+Improve skill detection using advanced NLP models
+Add support for multiple resume formats (DOCX, TXT)
+Provide better resume improvement suggestions
+Deploy the project on cloud for public access
+Improve ATS scoring logic to match real industry tools
